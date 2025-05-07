@@ -46,7 +46,11 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/NexusGym/",
+              "allowedCommonJsDependencies": [
+              "zone.js",
+              "@fortawesome/fontawesome-free"]
                         },
             "development": {
               "optimization": false,
