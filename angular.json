@@ -47,7 +47,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/NexusGym/",
+              "baseHref": "/Nexus_Gym/",
               "allowedCommonJsDependencies": [
               "zone.js",
               "@fortawesome/fontawesome-free"]
