@@ -1,0 +1,7 @@
+<div class="video-container" style="display: grid; place-items: center; margin-top: 30px;">
+    <!--proteccion para que no se pueda descargar el video y no se pueda abrir el menu contextual!-->
+    <video width="720" height="480" autoplay controls controlsList="nodownload" oncontextmenu="return false;">
+      <source [src]="safeVideoUrl" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video>
+  </div>

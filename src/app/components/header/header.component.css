@@ -1,0 +1,26 @@
+.mat-tab-header {
+    display: none;
+}
+
+.slogan-header {
+    background-color: #252424;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.slogan-text {
+    font-size: 2.5rem;
+    color: #fbd5e5;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-transform: none;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.slogan-text strong {
+    color: #ffffff;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+}

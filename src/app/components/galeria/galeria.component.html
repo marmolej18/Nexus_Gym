@@ -1,0 +1,39 @@
+<div style="display: grid; place-items: center; margin-top: 40px;">
+  <div
+    class="titulo-animado animate__animated animate__fadeInDown"
+    [ngStyle]="{
+      'font-size': '2.2rem',
+      'font-weight': '600',
+      'color': '#252424',
+      'font-family': 'Poppins, sans-serif',
+      'letter-spacing': '1px',
+      'text-align': 'center'
+    }">
+    ¡Conoce nuestras <span style='color: #f7076b; font-weight: 700;'>Instalaciones!</span>
+    <div
+      [ngStyle]="{
+        'width': '320px',
+        'height': '4px',
+        'background-color': '#f7076b',
+        'margin': '12px auto 0',
+        'border-radius': '10px',
+        'margin-bottom': '15px'
+      }">
+    </div>
+  </div>
+</div>
+
+
+<div>
+    <div class="masonry">
+        @for (tile of img; track tile) {
+          <div class="masonry-item">
+            <img [src]="tile.img" alt="Imagen" />
+          </div>
+        }
+      </div>
+</div>
+
+<app-video></app-video>
+
+

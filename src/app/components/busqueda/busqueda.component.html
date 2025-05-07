@@ -1,0 +1,9 @@
+<div class="general">
+    <div class="busqueda-container mb-5">
+        <input type="text" [(ngModel)]="termino" (input)="onBuscar()" class="form-control buscador-input"
+            placeholder="Buscar entrenadora de...">
+        <button class="boton-lupa" type="button" (click)="onBuscar()">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</div>

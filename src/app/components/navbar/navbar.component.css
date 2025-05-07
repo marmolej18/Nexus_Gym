@@ -1,0 +1,46 @@
+.sidenav-container {
+  position: relative; /* necesario para z-index funcione correctamente */
+  z-index: 1000;
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #fbd5e5 !important;
+  z-index: 1000; /* Asegura que esté por encima del carrusel (que no se tapen)*/
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1200;
+}
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  height: 60px;
+  margin-left: 16px;
+}
+
+.sidenav-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+mat-toolbar {
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.custom-toolbar {
+  background-color: #fbd5e5 !important;
+}
+
+
+
+
+
+
+

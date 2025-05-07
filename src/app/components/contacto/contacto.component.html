@@ -1,0 +1,53 @@
+<section 
+  class="container my-5 text-center animate__animated animate__fadeInUpBig"
+  [ngStyle]="{ 'background-color': '#252424', 'padding': '40px 20px', 'border-radius': '20px', 'margin-top': '10px' }"
+>
+  <h2 class="mb-5" style="color: #fbd5e5;">Conoce al equipo</h2>
+
+  <div 
+    class="entrenadoras-grid"
+    [ngStyle]="{ 'display': 'grid', 'grid-template-columns': 'repeat(auto-fit, minmax(300px, 1fr))', 'gap': '2rem', 'justify-content': 'center' }"
+  >
+    <!-- Tarjeta 1 -->
+    <mat-card 
+      [ngStyle]="{ 'background-color': '#fbd5e5', 'color': 'black' }" 
+      class="shadow-lg rounded-4 animate__animated" 
+      (mouseenter)="hover1=true" 
+      (mouseleave)="hover1=false" 
+      [ngClass]="{ 'animate__pulse': hover1 }"
+    >
+      <img mat-card-image src="assets/img/Jaz.jpg" alt="Integrante 1" style="height: 250px; object-fit: contain; background-color: #fffefe;" class="rounded-top-4">
+      <mat-card-content>
+        <h5 class="mt-3 mb-1 fw-bold animate__animated animate__fadeInLeft">Alicia Jazmín Díaz Laguna</h5>
+        <p class="text-dark mb-3">Estudiante de ingenieria en sistemas computacionales, actualmente cursando el 6° semestre.</p>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Tarjeta 2 -->
+    <mat-card 
+      [ngStyle]="{ 'background-color': '#fbd5e5', 'color': 'black' }" 
+      class="shadow-lg rounded-4 animate__animated" 
+      (mouseenter)="hover2=true" 
+      (mouseleave)="hover2=false" 
+      [ngClass]="{ 'animate__pulse': hover2 }"
+    >
+      <img mat-card-image src="assets/img/kimFotoContacto.jpg" alt="Integrante 2" style="height: 250px; object-fit: cover;" class="rounded-top-4">
+      <mat-card-content>
+        <h5 class="mt-3 mb-1 fw-bold animate__animated animate__fadeInRight">Kimberly Guadalupe Marmolejo García</h5>
+        <p class="text-dark mb-3">Estudiante de ingenieria en sistemas computacionales, actualmente cursando el 6° semestre.</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Descripción del Proyecto -->
+  <div class="mt-5 px-3">
+    <h3 class="mb-3" style="color: #fbd5e5;">Sobre el proyecto</h3>
+    <p class="animate__animated animate__fadeInUp" style="color: #fbd5e5; max-width: 800px; margin: 0 auto;">
+      Este sitio fue creado como parte de un proyecto universitario para desarrollar una plataforma web moderna y profesional orientada a un gimnasio exclusivo para mujeres. En él se aplicaron buenas prácticas de Angular, diseño responsive, uso de Angular Material, animaciones y estilo visual personalizado.
+    </p>
+  </div>
+</section>
+
+<div>
+  <app-trellocards></app-trellocards>
+</div>

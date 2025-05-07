@@ -1,0 +1,20 @@
+.opinion {
+
+    font-size: 14px;
+    padding: 10px;
+    min-width: 400px;
+    max-width: 400px;
+    background-color: #fbd5e5;
+    border-radius: 10px;
+}
+
+.fecha {
+    font-size: 12px;
+    color: #888;
+    line-height: 20px;
+}
+
+.nombre {
+    
+    font-weight: bold;
+}

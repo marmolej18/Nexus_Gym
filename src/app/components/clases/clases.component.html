@@ -1,0 +1,52 @@
+<div style="display: grid; place-items: center;">
+  <div class="titulo-animado animate__animated animate__fadeInDown" [ngStyle]="{
+      'font-size': '2.2rem',
+      'font-weight': '600',
+      'color': '#252424',
+      'font-family': 'Poppins, sans-serif',
+      'letter-spacing': '1px',
+      'text-align': 'center'
+    }">
+    Clases <span style="color: #f7076b; font-weight: 700;">Disponibles</span>
+    <div [ngStyle]="{
+        'width': '290px',
+        'height': '4px',
+        'background-color': '#f7076b',
+        'margin': '12px auto 0',
+        'border-radius': '10px'
+      }">
+    </div>
+  </div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 20px;">
+
+  @for (clase of clases; track clase.nombre) {
+  <div [ngClass]="'card-hoverable'" [ngStyle]="{
+    'border': '1px solid #ccc',
+    'padding': '16px',
+    'border-radius': '12px',
+    'box-shadow': '0 2px 8px rgba(0,0,0,0.1)',
+    'background-color': '#fbd5e5'
+  }">
+
+
+    <img [src]="clase.imagen" [alt]="clase.nombre" [ngStyle]="{
+          'width': '100%',
+          'height': '180px',
+          'object-fit': 'cover',
+          'border-radius': '8px 8px 0 0',
+          'margin-bottom': '12px'
+        }">
+
+    <h3 [ngStyle]="{ 'font-size': '20px', 'margin': '0 0 10px' }">{{ clase.nombre }}</h3>
+    <p [ngStyle]="{ 'margin': '0 0 8px', 'color': '#333' }"><strong>Descripción:</strong> {{ clase.descripcion }}</p>
+    <p [ngStyle]="{ 'margin': '0 0 8px' }"><strong>Horario:</strong> {{ clase.horario }}</p>
+    <p [ngStyle]="{ 'margin': '0' }"><strong>Costo:</strong> {{ clase.costo }}</p>
+  </div>
+  }
+</div>
+
+<div>
+  <app-promocion></app-promocion>
+</div>

@@ -1,0 +1,58 @@
+  <!-- carrusel -->
+<!-- Carrusel -->
+<div class="carousel-wrapper">
+  <button class="arrow left" (click)="anteriorSlide()">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+  <mat-tab-group
+    [(selectedIndex)]="activeIndex"
+    animationDuration="500ms"
+    class="custom-carousel"
+  >
+    @for (imagen of imagenesCarrusel; track imagen) {
+      <mat-tab>
+        <ng-template matTabContent>
+          <div class="carousel-slide">
+            <img [src]="imagen" alt="Imagen del carrusel" />
+          </div>
+        </ng-template>
+      </mat-tab>
+    }
+  </mat-tab-group>
+
+  <button class="arrow right" (click)="siguienteSlide()">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
+
+
+
+
+<!-- BÚSQUEDA -->
+<div class="container mb-4">
+  <app-busqueda (buscar)="onBuscar($event)"></app-busqueda>
+</div>
+
+<!-- GRID DE CARDS -->
+<div class="container pb-5 mt-4"> 
+  <div class="entrenadoras-grid">
+    @for (entrenadora of entrenadorasFiltradas(); track $index) {
+      <mat-card class="shadow-lg rounded-4 card-entrenadora">
+        <img mat-card-image [src]="entrenadora.foto" alt="Foto de entrenadora" class="rounded-top-4 object-fit-cover" style="height: 250px;">
+        <mat-card-content class="text-center mt-3">
+          <h5 class="fw-bold">{{ entrenadora.nombre }}</h5>
+          <p class="mb-1">{{ entrenadora.email }}</p>
+          <p class="mb-0">Diciplina: {{ entrenadora.discipline_name }}</p>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+  <!--Mensaje si no hay resultados-->
+  @if (entrenadorasFiltradas().length === 0) {
+    <div class="text-center mt-5 animate__animated animate__fadeIn">
+      <p style="color: #f7076b; font-size: 1.3rem; text-align: center;">No se encontró ninguna entrenadora con ese nombre.</p>
+    </div>
+  }
+</div>
+

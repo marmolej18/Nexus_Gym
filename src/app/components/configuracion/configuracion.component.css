@@ -1,0 +1,59 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  background-color: #fce4ec; 
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #ea4c89; 
+  color: rgb(0, 0, 0); 
+  text-align: center;
+  font-weight: bold;
+}
+
+
+td, th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+tr:hover {
+  background-color: #f8bbd0; 
+}
+
+
+mat-icon {
+  font-size: 22px;
+}
+
+
+button[disabled] mat-icon {
+  color: #c0c0c0;
+}
+
+
+button[mat-icon-button] {
+  margin: 0 4px;
+}
+
+
+input[matInput] {
+  width: 90%;
+  text-align: center;
+}
+
+
+mat-select {
+  width: 90%;
+}
+
+
+
+

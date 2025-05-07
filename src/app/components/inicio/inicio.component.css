@@ -1,0 +1,254 @@
+.custom-carousel {
+  width: 100vw;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 480px; /* puedes ajustar según tu diseño */
+  padding: 0;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  z-index: 1;
+  position: relative;
+  box-shadow: none;
+}
+
+
+
+.carousel-slide img:hover {
+  transform: scale(1.02);
+}
+
+
+
+.entrenadoras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Cards entrenadoras*/
+.card-entrenadora {
+  background-color: #fbd5e5;
+  color: #252424;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+
+.card-entrenadora:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (min-width: 1200px) {
+  .entrenadoras-grid {
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas exactas en desktop grande */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .entrenadoras-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas en tablet */
+  }
+}
+
+@media (max-width: 767px) {
+  .entrenadoras-grid {
+    grid-template-columns: 1fr;
+    /* 1 columna en celular */
+  }
+}
+
+/*Fechitas para el carrusel*/
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 4, 171, 0.9); 
+  color: white; 
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.2s ease;
+}
+
+.arrow:hover {
+  background-color: #f7076b;
+}
+
+
+.arrow:hover {
+  background-color: rgba(255, 4, 171, 0.596);
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.arrow mat-icon {
+  font-size: 32px;
+}
+
+.custom-carousel {
+  width: 100vw;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 480px; /* puedes ajustar según tu diseño */
+  padding: 0;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  z-index: 1;
+  position: relative;
+  box-shadow: none;
+}
+
+
+
+.carousel-slide img:hover {
+  transform: scale(1.02);
+}
+
+
+
+.entrenadoras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Cards entrenadoras*/
+.card-entrenadora {
+  background-color: #fbd5e5;
+  color: #252424;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+
+.card-entrenadora:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (min-width: 1200px) {
+  .entrenadoras-grid {
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas exactas en desktop grande */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .entrenadoras-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas en tablet */
+  }
+}
+
+@media (max-width: 767px) {
+  .entrenadoras-grid {
+    grid-template-columns: 1fr;
+    /* 1 columna en celular */
+  }
+}
+
+/*Fechitas para el carrusel*/
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #020202; 
+  color: #fbd5e5; 
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.2s ease;
+}
+
+.arrow:hover {
+  background-color: #696969;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.arrow mat-icon {
+  font-size: 32px;
+}
+
+::ng-deep .mat-tab-header {
+  display: none !important;
+}
+
+
+
+

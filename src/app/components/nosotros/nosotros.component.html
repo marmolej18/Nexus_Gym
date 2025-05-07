@@ -1,0 +1,122 @@
+<div class="contenedorPrincipal">
+    <div class="contenedor">
+
+        <app-titulo-nosotros></app-titulo-nosotros>
+        <p class="texto">Somos un gimnasio exclusivo para mujeres, diseñado para ofrecer una experiencia única en cada entrenamiento. Nuestro principal objetivo es que te sientas cómoda, segura y completamente libre en un espacio pensado especialmente para ti.
+            Sabemos que muchas veces el ambiente de los gimnasios tradicionales puede generar incomodidades, por eso aquí eliminamos esas barreras para que te concentres únicamente en ti y en tu bienestar. En nuestro gimnasio no hay juicios ni miradas incómodas, solo un entorno de respeto, apoyo y motivación.
+            Cada rincón ha sido creado con detalle para que disfrutes al máximo tu rutina, con instalaciones seguras, modernas y un equipo comprometido con ayudarte a alcanzar tus metas. Aquí, lo más importante eres tú y tu bienestar.</p>
+    </div>
+
+
+    <div class="formularioContenedor">
+        <div>
+            <form #formOpinion="ngForm" (ngSubmit)="enviar()">
+                <mat-card appearance="outlined">
+                  <mat-card-header>
+                    <mat-card-title>Tu opinión es importante para nosotros</mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content style="width: 400px;">
+                    <p>
+                        <mat-form-field class="full-width">
+                            <mat-label>Nombre</mat-label>
+                            <!-- valicacion del nombre!-->
+                            <input matInput name="nombre" [(ngModel)]="nombre" #nombreCtrl="ngModel" required>
+                            @if (nombreCtrl.invalid && nombreCtrl.touched) {
+                              <mat-error>El nombre es requerido.</mat-error>
+                            }
+                          </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field class="full-width">
+                            <mat-label>Apellido</mat-label>
+                            <input matInput name="apellido" [(ngModel)]="apellido" #apellidoCtrl="ngModel" required>
+                            @if (apellidoCtrl.invalid && apellidoCtrl.touched) {
+                              <mat-error>El apellido es requerido.</mat-error>
+                            }
+                          </mat-form-field>
+                    </p>
+
+                    
+                    
+                        <mat-form-field class="full-width">
+                          <mat-label>Opinión</mat-label>
+                          <textarea matInput name="opinion" [(ngModel)]="opinion" #opinionCtrl="ngModel" required></textarea>
+                          
+                          <!-- Validación de la opinión -->
+                          @if (opinionCtrl.invalid && opinionCtrl.touched) {
+                            <mat-error>La opinión es requerida.</mat-error>
+                          }
+                        </mat-form-field>
+                        <p>
+                          <mat-form-field class="full-width">
+                            <mat-label>Última visita</mat-label>
+                            <input matInput name="fecha" [matDatepicker]="picker" [(ngModel)]="fecha" #fechaCtrl="ngModel" required [max]="hoy">
+                          
+                            <!-- Validación de la fecha -->
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                          
+                            @if (fechaCtrl.errors?.['required'] && fechaCtrl.touched) {
+                              <mat-error>La fecha es requerida.</mat-error>
+                            }
+                            
+                            @else if (fechaCtrl.errors?.['matDatepickerMax'] && fechaCtrl.touched) {
+                              <mat-error>No puedes elegir una fecha futura.</mat-error>
+                            }
+                          
+                            <mat-datepicker #picker></mat-datepicker>
+                          </mat-form-field>
+                        </p>
+
+                        <p>
+                          <mat-form-field class="full-width">
+                            <mat-label>Edad</mat-label>
+                            <mat-select
+                              name="edad"
+                              [(ngModel)]="edad"
+                              #edadCtrl="ngModel"
+                              required
+                            >
+                              <mat-option [value]="undefined" disabled>-- Selecciona tu edad --</mat-option>
+                              @for (e of edades; track e) {
+                                <mat-option [value]="e">{{ e }}</mat-option>
+                              }
+                            </mat-select>
+                            @if (edadCtrl.invalid && edadCtrl.touched) {
+                              <mat-error>La edad es requerida.</mat-error>
+                            }
+                          </mat-form-field>
+  
+                        </p>
+                        
+                        
+                  </mat-card-content>
+                  <mat-card-actions>
+                    
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!formOpinion.valid">
+                      Enviar
+                    </button>
+                    
+                  </mat-card-actions>
+                </mat-card>
+              </form>
+              
+        </div>
+        <!--**********************************************************************-->
+        <div>
+            <mat-card appearance="outlined">
+                <mat-card-header>
+                  <mat-card-title>Opiniones</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="opinionContainer">
+                        @for (opinion of opiniones; track $index) {
+                            <app-opinion [opinion]="opinion"></app-opinion>
+                        }
+                    </div>
+                </mat-card-content>
+                
+            </mat-card>
+        </div>
+          
+    </div>
+</div>
