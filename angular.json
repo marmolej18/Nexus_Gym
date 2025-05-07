@@ -46,11 +46,7 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all",
-              "baseHref": "/NexusGym/",
-              "allowedCommonJsDependencies": [
-              "zone.js",
-              "@fortawesome/fontawesome-free"]
+              "outputHashing": "all"
                         },
             "development": {
               "optimization": false,
@@ -95,6 +91,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
